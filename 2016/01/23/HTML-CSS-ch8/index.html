@@ -3,21 +3,66 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Neptune</title>
+  <title>HTML+CSS 第八章选择器 | Neptune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="##8-1 什么是选择器
+
+说明
+
+每一条css样式声明有两部分组成，形式如下
+选择器{
+    样式;
+}
+在{}之前的部分就是选择器，选择器指明了{}中的样式的作用对象，也就是样式作用于网页中的哪些元素
+##8-2 标签选择器
+
+说明
+
+标签选择器其实就是html代码中的标签。例如&amp;lt;html&amp;gt;,&amp;lt;body&amp;gt;,&amp;lt;h1&amp;gt;,&amp;lt;p&amp;gt;
+
+举例
+  p{fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/01/18/hello-world/index.html">
+<meta property="og:title" content="HTML+CSS 第八章选择器">
+<meta property="og:url" content="http://yoursite.com/2016/01/23/HTML-CSS-ch8/index.html">
 <meta property="og:site_name" content="Neptune">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-01-18T01:41:53.808Z">
+<meta property="og:description" content="##8-1 什么是选择器
+
+说明
+
+每一条css样式声明有两部分组成，形式如下
+选择器{
+    样式;
+}
+在{}之前的部分就是选择器，选择器指明了{}中的样式的作用对象，也就是样式作用于网页中的哪些元素
+##8-2 标签选择器
+
+说明
+
+标签选择器其实就是html代码中的标签。例如&amp;lt;html&amp;gt;,&amp;lt;body&amp;gt;,&amp;lt;h1&amp;gt;,&amp;lt;p&amp;gt;
+
+举例
+  p{fo">
+<meta property="og:updated_time" content="2016-01-24T01:18:48.362Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="HTML+CSS 第八章选择器">
+<meta name="twitter:description" content="##8-1 什么是选择器
+
+说明
+
+每一条css样式声明有两部分组成，形式如下
+选择器{
+    样式;
+}
+在{}之前的部分就是选择器，选择器指明了{}中的样式的作用对象，也就是样式作用于网页中的哪些元素
+##8-2 标签选择器
+
+说明
+
+标签选择器其实就是html代码中的标签。例如&amp;lt;html&amp;gt;,&amp;lt;body&amp;gt;,&amp;lt;h1&amp;gt;,&amp;lt;p&amp;gt;
+
+举例
+  p{fo">
   
     <link rel="alternative" href="/atom.xml" title="Neptune" type="application/atom+xml">
   
@@ -63,10 +108,10 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-HTML-CSS-ch8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/01/18/hello-world/" class="article-date">
-  <time datetime="2016-01-18T01:41:53.808Z" itemprop="datePublished">2016-01-18</time>
+    <a href="/2016/01/23/HTML-CSS-ch8/" class="article-date">
+  <time datetime="2016-01-23T08:26:16.000Z" itemprop="datePublished">2016-01-23</time>
 </a>
     
   </div>
@@ -77,7 +122,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      HTML+CSS 第八章选择器
     </h1>
   
 
@@ -85,20 +130,46 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>##8-1 什么是选择器</p>
+<ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>每一条css样式声明有两部分组成，形式如下</p>
+<pre><code>选择器{
+    样式;
+}
+</code></pre><p>在{}之前的部分就是<em>选择器</em>，<em>选择器</em>指明了{}中的<em>样式</em>的作用对象，也就是<em>样式</em>作用于网页中的哪些元素</p>
+<p>##8-2 标签选择器</p>
+<ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>标签选择器其实就是html代码中的标签。例如<code>&lt;html&gt;,&lt;body&gt;,&lt;h1&gt;,&lt;p&gt;</code></p>
+<ul>
+<li><p><strong>举例</strong></p>
+<p>  p{font-size=12px;line-height:1.6em}</p>
+</li>
+</ul>
+<p>上面css样式代码的作用：为p标签设置12px字号，行间距为1.6em</p>
+<p>##8-3 类选择器</p>
+<ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>类选择在css样式编码中时最常用到的</p>
+<ul>
+<li><strong>语法</strong></li>
+</ul>
+<p>.类选择器名称{css样式代码;}</p>
+<p>1.使用合适的标签把要修饰的内容表记起来，如下：</p>
+<pre><code>`&lt;span&gt;壮志凌云&lt;span&gt;`
+</code></pre><p>2.使用class=“类选择器名称”为标签设置一个类，如下：</p>
+<pre><code>&lt;span class=&quot;stress&quot;&gt;壮志凌云&lt;/span&gt;
+</code></pre><p>3.设置类选择器css样式，如下:</p>
+<pre><code>.stress{color:red;}/*类前面要加入一个英文圆点*/
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/18/hello-world/" data-id="cijz7fhya000g4winrp25850i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/23/HTML-CSS-ch8/" data-id="cijz7fhyq000m4winwpg5s7tp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,15 +178,20 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2016/01/18/HTML-CSS-ch5/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/23/HTML-CSS-ch8/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          HTML+CSS 第五章 与浏览者交互，表单标签
+          (no title)
         
       </div>
     </a>
   
+  
+    <a href="/2016/01/19/HTLM-CSS-ch7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTLM+CSS 第七章CSS样式基本知识</div>
+    </a>
   
 </nav>
 
