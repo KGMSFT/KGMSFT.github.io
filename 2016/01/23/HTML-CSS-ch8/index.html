@@ -39,7 +39,7 @@
 
 举例
   p{font-siz">
-<meta property="og:updated_time" content="2016-01-29T04:45:41.529Z">
+<meta property="og:updated_time" content="2016-02-09T01:50:17.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML+CSS 第八章选择器">
 <meta name="twitter:description" content="8-1 什么是选择器
@@ -108,6 +108,10 @@
   <time datetime="2016-01-23T08:26:16.000Z" itemprop="datePublished">2016-01-23</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HTML-CSS/">HTML+CSS</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -156,18 +160,92 @@
 <pre><code>&lt;span class=&quot;stress&quot;&gt;壮志凌云&lt;/span&gt;
 </code></pre><p>3.设置类选择器css样式，如下:</p>
 <pre><code>.stress{color:red;}/*类前面要加入一个英文圆点*/
+</code></pre><h2 id="8-4_ID__u9009_u62E9_u5668"><a href="#8-4_ID__u9009_u62E9_u5668" class="headerlink" title="8-4 ID 选择器"></a>8-4 ID 选择器</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>很多方面，ID选择器都类似于选择符，但也有一些重要区别，见以下语法</p>
+<ul>
+<li><strong>语法</strong></li>
+</ul>
+<ol>
+<li>为标签设置id=”ID名称”，而不是class=”类名称”。</li>
+<li>ID选择符的前面是<code>#</code>号，而不是英文圆点<code>.</code></li>
+</ol>
+<h2 id="8-5_u7C7B_u548CID_u9009_u62E9_u5668_u7684_u533A_u522B"><a href="#8-5_u7C7B_u548CID_u9009_u62E9_u5668_u7684_u533A_u522B" class="headerlink" title="8-5类和ID选择器的区别"></a>8-5类和ID选择器的区别</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>相同点：可以应用于任何元素</p>
+<p>不同点：</p>
+<ol>
+<li><p>ID选择器只能在文档里使用一次，而类选择器可以使用多次。</p>
+<p> /<em>正确示例</em>/<br> <span class="stress">壮志凌云</span><br> <span class="stress">凌云壮志</span></p>
+<p> /<em>错误示例</em>/<br> <span id="stress">壮志凌云</span><br> <span id="stress">凌云壮志</span></p>
+</li>
+<li>可以使用类选择器</li>
+</ol>
+<h2 id="8-6_u5B50_u9009_u62E9_u5668"><a href="#8-6_u5B50_u9009_u62E9_u5668" class="headerlink" title="8-6子选择器"></a>8-6子选择器</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>标志为大于号(&gt;)用于选择指定标签元素的<em>第一代子元素</em></p>
+<ul>
+<li><strong>举例</strong></li>
+</ul>
+<p>如下:</p>
+<pre><code>.food&gt;li{border:1px solid red;}
+/*这行代码会使class名为food下的子元素li（水果、蔬菜）加入红色实线边框。*/
+</code></pre><h2 id="8-7__u5305_u542B_28_u540E_u4EE3_29_u9009_u62E9_u5668"><a href="#8-7__u5305_u542B_28_u540E_u4EE3_29_u9009_u62E9_u5668" class="headerlink" title="8-7 包含(后代)选择器"></a>8-7 包含(后代)选择器</h2><ul>
+<li><p><strong>举例</strong></p>
+<p>  .first span{color:red}</p>
+</li>
+<li><p><strong>说明</strong></p>
+</li>
+</ul>
+<p>自选择器与后代选择器的区别：子选择器(child selector)仅是指它的<em>直接后代</em>，或者你可以理解为作用于子元素的第一代后代。而后代选择器作用于<em>所有子后代元素</em>。后代选择器通过<em>空格</em>来进行选择，而自选择器通过<em>“&gt;”</em>进行选择。</p>
+<p>总结：<em>&gt;</em>作用于元素的<em>第一代</em>后代，<em>空格</em>作用于元素的<em>所有</em>后代</p>
+<h2 id="8-8__u901A_u7528_u9009_u62E9_u5668"><a href="#8-8__u901A_u7528_u9009_u62E9_u5668" class="headerlink" title="8-8 通用选择器"></a>8-8 通用选择器</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>通用选择器是功能最强的的选择器，它使用一个(<em>)号指定，它的作用是匹配html中</em>所有*标签元素，如下使用下面代码使用html中任意标签元素字体颜色全部设置为红色：</p>
+<pre><code>* {color:red;}
+</code></pre><h2 id="8-9__u4F2A_u7C7B_u9009_u62E9_u7B26"><a href="#8-9__u4F2A_u7C7B_u9009_u62E9_u7B26" class="headerlink" title="8-9 伪类选择符"></a>8-9 伪类选择符</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>伪类选择符，它允许给html不存在的标签（标签的某种状态）设置样式，比如我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：<code>a:hover{color:red;}</code></p>
+<h2 id="8-10__u5206_u7EC4_u9009_u62E9_u7B26"><a href="#8-10__u5206_u7EC4_u9009_u62E9_u7B26" class="headerlink" title="8-10 分组选择符"></a>8-10 分组选择符</h2><ul>
+<li><strong>说明</strong></li>
+</ul>
+<p>当你想为html中多个标签元素设置同一样式时，可以使用分组选择符（,）,</p>
+<ul>
+<li><strong>举例</strong></li>
+</ul>
+<p>如下代码为右侧代码编辑器中h1、span标签同时设置字体颜色为红色</p>
+<pre><code>h1,span{color:red;}
+</code></pre><p>相当于下面两行代码：</p>
+<pre><code>h1{color:red;}
+span{color:red;}
 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/HTML-CSS-ch8/" data-id="cijz7ifh4000masinc2x2hvb2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/23/HTML-CSS-ch8/" data-id="ciker3f9e000qfwintps1wsd3" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/02/09/HTML-CSS-ch9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          HTML+CSS_ch9
+        
+      </div>
+    </a>
   
   
     <a href="/2016/01/19/HTLM-CSS-ch7/" id="article-nav-older" class="article-nav-link-wrap">
@@ -188,7 +266,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML-CSS/">HTML+CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMl-CSS/">HTMl+CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/plans/">plans</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scaffolds/">scaffolds</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML-CSS/">HTML+CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMl-CSS/">HTMl+CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/plans/">plans</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scaffolds/">scaffolds</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -197,7 +275,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CG/">CG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/holiday/">holiday</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/">plan</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CG/">CG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/holiday/">holiday</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/">plan</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -215,7 +293,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">7</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -225,6 +303,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/09/HTML-CSS-ch9/">HTML+CSS_ch9</a>
+          </li>
         
           <li>
             <a href="/2016/01/23/HTML-CSS-ch8/">HTML+CSS 第八章选择器</a>
@@ -240,10 +322,6 @@
         
           <li>
             <a href="/2016/01/19/Markdown-test/">Markdown语法</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/18/HTML-CSS-ch6/">HTML+CSS 第六章 开始学习CSS,为网页添加样式</a>
           </li>
         
       </ul>
